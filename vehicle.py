@@ -5,7 +5,7 @@ class MotorVehicle:
     power = 0
     gas_mileage = 0
     no_passangers = 0
-    color = None
+    color = "black"
 
     def __init__(self):
         pass
