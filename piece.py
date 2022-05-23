@@ -3,20 +3,20 @@ from abc import abstractclassmethod
 
 class Piece:
     color = "b"
-    i = 0
-    j = 0
+    row = 0
+    col = 0
     char = "X"
 
-    def __init__(self, i, j) -> None:
-        self.i = i
-        self.j = j
+    def __init__(self, row, col) -> None:
+        self.row = row
+        self.col = col
 
     @abstractclassmethod
-    def move(self, i, j):
+    def move(self, board, row, col):
         raise NotImplementedError
 
     @abstractclassmethod
-    def attack(self, i, j):
+    def attack(self, board, row, col):
         raise NotImplementedError
 
     def print(
