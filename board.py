@@ -5,7 +5,7 @@ from pawn import Pawn
 class Board:
     board = None
 
-    def __init__(self) -> None:
+    def __init__(self, empty=False) -> None:
         s = [
             "        ",
             "        ",
@@ -18,6 +18,9 @@ class Board:
         ]
 
         self.board = [[None] * 8 for _ in range(8)]
+
+        if empty:
+            return
 
         # filling the board
         for row in range(len(s)):

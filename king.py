@@ -16,7 +16,8 @@ class King(Piece):
             elif self.color == "w":
                 if (self.row - row) >= -1 and (self.col-col)>=-1:
                     return True
-        print("Invalid movement")
+
+        return False
 
     def move(self, board, row, col):
         if self._is_valid_move(board, row, col):
@@ -25,6 +26,10 @@ class King(Piece):
 
             self.row = row
             self.col = col
+
+            return True
+        
+        return False
 
     def attack(self, board, row, col):
         pass
