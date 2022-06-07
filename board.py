@@ -1,4 +1,5 @@
 from king import King
+from knight import Knight
 from pawn import Pawn
 
 
@@ -14,7 +15,7 @@ class Board:
             "        ",
             "        ",
             "pppppppp",
-            "   k    ",
+            " n k  n ",
         ]
 
         self.board = [[None] * 8 for _ in range(8)]
@@ -28,6 +29,9 @@ class Board:
                         self.board[row][col] = p
                     if s[row][col] == "k":
                         p = King(row, col)
+                        self.board[row][col] = p
+                    if s[row][col] == "k":
+                        p = Knight(row, col)
                         self.board[row][col] = p
 
     def print(self):
